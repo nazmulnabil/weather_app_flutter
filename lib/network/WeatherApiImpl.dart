@@ -1,8 +1,10 @@
 import 'package:weather_app_flutter/config/build_config.dart';
 import 'package:weather_app_flutter/network/WeatherApi.dart';
 import 'package:weather_app_flutter/network/dio_client.dart';
-import 'package:weather_app_flutter/ui/home/model/weather_data.dart';
-import 'package:weather_app_flutter/ui/home/model/weather_response.dart';
+
+import '../modules/home/model/weather_data.dart';
+import '../modules/home/model/weather_response.dart';
+
 
 class WeatherApiImpl extends WeatherApi {
   var logger = BuildConfig.instance.config.logger;

@@ -6,7 +6,9 @@ import 'package:logger/logger.dart';
 import 'package:weather_app_flutter/config/build_config.dart';
 import 'package:weather_app_flutter/config/env_config.dart';
 
-import 'ui/home/view/HomePage.dart';
+import 'modules/home/view/HomePage.dart';
+
+
 
 Future<void> main() async {
   var logger = Logger();
