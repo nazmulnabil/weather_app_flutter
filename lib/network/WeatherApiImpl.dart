@@ -22,10 +22,17 @@ class WeatherApiImpl extends WeatherApi {
         queryParameters: {'id': cityId},
       );
 
-      logger.i("Response body JSON:\n$response");
+      logger.i("city Response body JSON:\n$response");
 
       WeatherResponse weatherResponse = WeatherResponse.fromJson(response.data);
+
+      logger.i("Response body JSON:\n$weatherResponse");
+
       WeatherData weatherData = weatherResponse.toWeatherData();
+      print(weatherData.cityAndCountry) ;
+
+      print("from network $weatherData");
+
       return weatherData;
     } catch (e) {
       throw e;

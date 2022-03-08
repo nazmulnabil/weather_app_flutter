@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app_flutter/ui/home/model/weather_data.dart';
-import 'package:weather_app_flutter/ui/home/widget/sun_time.dart';
-import 'package:weather_app_flutter/ui/home/widget/temperature_section.dart';
-import 'package:weather_app_flutter/ui/home/widget/weather_property.dart';
+import 'package:weather_app_flutter/modules/home/widget/sun_time.dart';
+import 'package:weather_app_flutter/modules/home/widget/temperature_section.dart';
+import 'package:weather_app_flutter/modules/home/widget/weather_property.dart';
+
+import '../model/weather_data.dart';
+
 
 class WeatherDataOutput extends StatelessWidget {
   final WeatherData weather;
@@ -11,6 +13,7 @@ class WeatherDataOutput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("inside weather data output");
     return Expanded(
       child: Column(
         children: [

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app_flutter/ui/home/model/City.dart';
+
+import '../model/City.dart';
+
 
 class InputSection extends StatefulWidget {
   final List<City> cityList;

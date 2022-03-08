@@ -1,11 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:logger/logger.dart';
 import 'package:weather_app_flutter/config/build_config.dart';
 import 'package:weather_app_flutter/config/env_config.dart';
-
 import 'modules/home/view/HomePage.dart';
 
 
