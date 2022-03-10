@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:weather_app_flutter/core/app_colors.dart';
 import 'package:weather_app_flutter/modules/home/controller/home_controller.dart';
 import '../model/City.dart';
 import '../widget/weather_data_output.dart';
@@ -23,6 +24,7 @@ class _HomePageState extends State<HomePage> {
     Get.lazyPut(()=>HomeController());
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: AppColors.colorPrimary,
         title: Text(widget.title),
       ),
       body: Container(
@@ -45,8 +47,12 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            _getCityDropdown(),
-            ElevatedButton(onPressed: Get.find<HomeController>().showWeather, child: Text('VIEW WEATHER')),
+            Container(height: 40,width: MediaQuery.of(context).size.width/2
+                ,
+                child: _getCityDropdown()),
+            Expanded(child: ElevatedButton(
+
+                onPressed: Get.find<HomeController>().showWeather, child: Text('VIEW WEATHER'))),
 
 
           ],
@@ -55,6 +61,7 @@ class _HomePageState extends State<HomePage> {
 
   DropdownButton<City> _getCityDropdown() {
     return DropdownButton<City>(
+    underline: Container(),
       value: Get.find<HomeController>().selectedCity,
       onChanged: (City? newCity) {
         setState(() {
